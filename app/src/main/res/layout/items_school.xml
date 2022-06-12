@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:padding="5dp">
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/nameSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="2"
+                    tools:text="Clinton School Writers Artists, M.S. 260" />
+
+            </LinearLayout>
+            <TextView
+                android:background="@color/cyan"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:id="@+id/addressSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:padding="15dp"
+                android:textStyle="bold"
+                tools:text="10 East 15th Street, Manhattan NY 10003" />
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
