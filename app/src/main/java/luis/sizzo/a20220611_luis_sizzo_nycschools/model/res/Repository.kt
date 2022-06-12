@@ -67,7 +67,7 @@ class RepositoryImpl @Inject constructor(
             } else {
                 //emit(StateUI.Message("Loading from cache"))
                 val cache = schoolDao.getAll()
-                if (!cache.isNullOrEmpty()) {
+                if (!cache.isEmpty()) {
                     emit(UI_State.SUCCESS(cache))
                 } else {
                     throw Exception("Cache failed")
@@ -83,9 +83,8 @@ class RepositoryImpl @Inject constructor(
         emit(UI_State.LOADING)
         try {
             val cache = schoolDao.findByDbn(dbn)
-
             Log.d("RepositoryImpl_getSat", cache.toString())
-            if (!cache.isNullOrEmpty()){
+            if (!cache.isEmpty()){
                 emit(UI_State.SUCCESS(cache))
             }
         } catch (e: Exception) {

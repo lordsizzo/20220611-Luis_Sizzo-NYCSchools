@@ -11,7 +11,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import luis.sizzo.a20220611_luis_sizzo_nycschools.databinding.ActivitySatViewBinding
 import luis.sizzo.a20220611_luis_sizzo_nycschools.model.UI_State
 import luis.sizzo.a20220611_luis_sizzo_nycschools.model.local.sat_entity.SatEntity
-import luis.sizzo.a20220611_luis_sizzo_nycschools.model.remote.SatResponse
 import luis.sizzo.a20220611_luis_sizzo_nycschools.view_model.MainActivityViewModel
 
 @AndroidEntryPoint

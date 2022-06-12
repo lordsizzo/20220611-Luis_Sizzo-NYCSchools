@@ -2,7 +2,6 @@ package luis.sizzo.a20220611_luis_sizzo_nycschools.view.adapters
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.view.LayoutInflater
 import android.view.*
 import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf

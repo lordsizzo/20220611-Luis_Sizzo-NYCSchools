@@ -5,8 +5,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.*
 import com.google.android.material.snackbar.Snackbar
-import luis.sizzo.a20220611_luis_sizzo_nycschools.model.local.schools_entity.SchoolEntity
-import luis.sizzo.a20220611_luis_sizzo_nycschools.model.remote.SchoolsResponse
 import luis.sizzo.a20220611_luis_sizzo_nycschools.view.adapters.SchoolsAdapter
 
 fun RecyclerView.settingsGrid(adapter: SchoolsAdapter){
@@ -32,14 +30,3 @@ fun View.click(listener: (View) -> Unit){
         listener(it)
     }
 }
-
-fun SchoolsResponse.toDatabase() =
-    SchoolEntity(
-        dbn = dbn,
-        school_name = school_name,
-        overview_paragraph = overview_paragraph,
-        primary_address_line_1 = primary_address_line_1,
-        city = city,
-        zip = zip,
-        state_code = state_code
-    )
