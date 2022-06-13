@@ -39,7 +39,6 @@ class SchoolsAdapter(private val items: List<SchoolEntity>) :
                     "description" to items[position].overview_paragraph)
                 intent.putExtras(bundle)
                 holder.binding.root.context.startActivity(intent)
-                //it.snack("His currency is ${items[position].currency.name} and language is ${items[position].language.name} ")
             }
         } catch (e: Exception) {
 

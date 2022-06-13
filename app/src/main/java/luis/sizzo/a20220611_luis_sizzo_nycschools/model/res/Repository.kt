@@ -25,7 +25,6 @@ class RepositoryImpl @Inject constructor(
         emit(UI_State.LOADING)
         try {
             if (CheckConnection().isConnected()) {
-                //emit(UI_State.Message("Loading from network"))
                 if(service.getSat().isSuccessful){
                     val response = service.getSat()
                     response.body()?.let { result ->
@@ -65,7 +64,6 @@ class RepositoryImpl @Inject constructor(
                     throw Exception("Network call failed")
                 }
             } else {
-                //emit(StateUI.Message("Loading from cache"))
                 val cache = schoolDao.getAll()
                 if (!cache.isEmpty()) {
                     emit(UI_State.SUCCESS(cache))
