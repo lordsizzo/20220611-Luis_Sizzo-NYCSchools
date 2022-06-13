@@ -82,7 +82,7 @@ class RepositoryImpl @Inject constructor(
         try {
             val cache = schoolDao.findByDbn(dbn)
             Log.d("RepositoryImpl_getSat", cache.toString())
-            if (!cache.isEmpty()){
+            if (cache.isNotEmpty()){
                 emit(UI_State.SUCCESS(cache))
             }
         } catch (e: Exception) {

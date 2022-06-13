@@ -25,6 +25,10 @@ class MainActivityViewModel @Inject constructor(
     val stateView: MutableLiveData<Boolean>
         get() = _stateView
 
+    init {
+        getSchools()
+    }
+
     fun getSchools() {
         coroutineScope.launch {
             repository.getSchools().collect { state_result ->

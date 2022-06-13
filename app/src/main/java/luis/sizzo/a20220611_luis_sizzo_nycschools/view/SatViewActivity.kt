@@ -28,7 +28,7 @@ class SatViewActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
         initViews()
-        initOberserver()
+        initObserver()
     }
 
     private fun initViews() {
@@ -50,7 +50,7 @@ class SatViewActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun initOberserver() {
+    private fun initObserver() {
         viewModel.getSatResponse.observe(this) {
             it.let { result ->
                 try {

@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initViews()
-        initOberserver()
+        initObserver()
     }
 
     private fun initViews() {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun initOberserver() {
+    private fun initObserver() {
         viewModel.stateView.observe(this) {
             Log.d("MainActivity", "Result of observe: $it")
             howShowIt = it
@@ -102,7 +102,6 @@ class MainActivity : AppCompatActivity() {
                 binding.swipeRefresh.isRefreshing = false
             }
         }
-        viewModel.getSchools()
     }
 
     private fun showError(message: String) {

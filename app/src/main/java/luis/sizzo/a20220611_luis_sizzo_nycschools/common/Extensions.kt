@@ -17,12 +17,12 @@ fun RecyclerView.settingsLinearVertical(adapter: SchoolsAdapter){
     this.adapter = adapter
 }
 
-fun Context.toast(message: String, lenght: Int = Toast.LENGTH_SHORT){
-    Toast.makeText(this, message, lenght).show()
+fun Context.toast(message: String, length: Int = Toast.LENGTH_SHORT){
+    Toast.makeText(this, message, length).show()
 }
 
-fun View.snack(message: String, lenght: Int = Snackbar.LENGTH_SHORT){
-    Snackbar.make(this, message, lenght).show()
+fun View.snack(message: String, length: Int = Snackbar.LENGTH_SHORT){
+    Snackbar.make(this, message, length).show()
 }
 
 fun View.click(listener: (View) -> Unit){
